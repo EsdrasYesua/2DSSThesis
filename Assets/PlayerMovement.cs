@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Animator animator;
    public Rigidbody2D playerRb;
    public float speed;
    public float input;
@@ -23,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
   void Update()
    {
     input = Input.GetAxisRaw("Horizontal");
-
-    /*animator.SetFloat("Speed", Mathf.abs(GetAxisRaw));*/
         if(input<0)
         {
             spriteRenderer.flipX = true;
