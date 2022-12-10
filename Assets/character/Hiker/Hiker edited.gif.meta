@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26fe42e4723c74b4990264e46a62e2ce
+guid: fa9e08ec732793742933bf9b98d463e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: Hiker edited_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 13
-        height: 24
+        x: 90
+        y: 40
+        width: 130
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,113 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 717ed5de675107a42b272f33cad58380
-      internalID: 1410802083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_1
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 0
-        width: 13
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e20757ad758aba547b37e44bffb86273
-      internalID: 983064333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_2
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 0
-        width: 13
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d155f983d481d447b3f5e4d6c6cf449
-      internalID: 143772175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_3
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 0
-        width: 13
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 881404944e41dd4479f2fefb03cd126b
-      internalID: -1275225281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_4
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 0
-        width: 13
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b75b478fb5254844ab64979622beaa6
-      internalID: -993845453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_5
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 0
-        width: 13
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0d79c1cd22b13a41acee2915a0d494a
-      internalID: -256848402
+      spriteID: 5532d6add65bce940bc625eb7f34451d
+      internalID: 578079995
       vertices: []
       indices: 
       edges: []
@@ -253,12 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_4: -993845453
-      Idle_1: 983064333
-      Idle_3: -1275225281
-      Idle_5: -256848402
-      Idle_0: 1410802083
-      Idle_2: 143772175
+      Hiker edited_0: 578079995
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
