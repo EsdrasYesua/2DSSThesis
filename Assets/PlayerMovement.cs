@@ -4,68 +4,63 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-   public Rigidbody2D playerRb;
-   public float speed;
-   public float input;
-   public SpriteRenderer spriteRenderer;
-   public float jumpForce;
 
-   public LayerMask groundLayer;
-   private bool isGrounded;
-   public Transform feetPosition;
-   public float groundCheckCircle;
+    public CharacterController2D controller; 
+    public Animator animator;
 
-   public float jumpTime = 0.35f;
-   public float jumpTimeCounter;
-   private bool isJumping;
+    public float runSpeed = 60f;
 
-  void Update()
-   {
-    input = Input.GetAxisRaw("Horizontal");
-        if(input<0)
+    float horizontalMove = 0f;
+    bool jump = false;
+    bool crouch = false;
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+
+        if (Input.GetButtonDown("Jump"))
         {
-            spriteRenderer.flipX = true;
+            //Debug.Log(Input.GetButtonDown("Jump"));
+            jump = true;
+            animator.SetBool("IsJumping", true);
         }
-        else if (input>0)
+
+
+        if(Input.GetButtonDown("Crouch"))
         {
-            spriteRenderer.flipX= false;
+            //Debug.Log(Input.GetButtonDown("Crouch"));
+            crouch = true; 
+            // animator.SetBool("IsCrouching",true);
         }
-
-        isGrounded = Physics2D.OverlapCircle(feetPosition.position, groundCheckCircle,groundLayer);
-
-        if (isGrounded == true && Input.GetButton("Jump"))
-        {   
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            playerRb.velocity = Vector2.up * jumpForce;
-        }
-
-        if (Input.GetButton("Jump") && isJumping == true)
+        else if (Input.GetButtonUp("Crouch"))
         {
-            if(jumpTimeCounter>0)
-            {
-                
-             playerRb.velocity = Vector2.up * jumpForce;
-             jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-          
+            crouch = false;
+            // animator.SetBool("IsCrouching",false);
+            //Debug.Log(Input.GetButtonUp("Crouch"));
         }
 
-        if(Input.GetButtonUp("Jump"))
-        {
-            isJumping = false;
-        }
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+
+    public void OnCrouching()
+    {
+        animator.SetBool("IsCrouching", false);
+    }
+
+    void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
+        //Debug.Log(Input.GetButtonUp("Jump"));
 
 
-   }
-
-  void FixedUpdate()
-   {
-    playerRb.velocity = new Vector2 (input * speed, playerRb.velocity.y);
-   }
+    }
 
 }
