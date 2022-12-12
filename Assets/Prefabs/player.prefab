@@ -148,13 +148,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRb: {fileID: 3085168641022739303}
-  speed: 10
+  speed: 100
   input: 0
   spriteRenderer: {fileID: 3085168641022739296}
-  jumpForce: 12
+  jumpForce: 500
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   feetPosition: {fileID: 3085168640343716001}
   groundCheckCircle: 0.3
   jumpTime: 0.2
